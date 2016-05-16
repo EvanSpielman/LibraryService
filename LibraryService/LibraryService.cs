@@ -38,6 +38,9 @@ namespace Library
             return books;
         }
 
+        /// <summary>
+        /// Save a book to the service - temporary
+        /// </summary>
         public void SaveBook()
         {
             Thread.Sleep(5000);
