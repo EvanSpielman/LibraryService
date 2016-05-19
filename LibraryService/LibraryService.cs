@@ -39,10 +39,12 @@ namespace Library
         }
 
         /// <summary>
-        /// Save a book to the service - temporary
+        /// Save a book to the service
         /// </summary>
-        public void SaveBook()
+        /// <param name="book">The book to save</param>
+        public void SaveBook(Book book)
         {
+            books.Add(book);
             Thread.Sleep(5000);
         }
 
@@ -57,7 +59,6 @@ namespace Library
                 where book.Title.Equals(title, StringComparison.InvariantCultureIgnoreCase)
                       && book.Author.Equals(author, StringComparison.InvariantCultureIgnoreCase)
                 select book).FirstOrDefault();
-
             books.Remove(bookToDelete);
 
             Thread.Sleep(5000);

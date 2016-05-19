@@ -11,7 +11,7 @@ namespace Library
         List<Book> GetAllBooks();
 
         [OperationContract]
-        void SaveBook();
+        void SaveBook(Book book);
 
         [OperationContract]
         void DeleteBook(string title, string author);
